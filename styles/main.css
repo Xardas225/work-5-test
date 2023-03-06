@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8FAFF;
+    color: #7D7D7D;
+    font-size: 14px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: url('../assets/images/arrow.svg');
+}
+
+.logo {
+    margin: 25px;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0px 0px 38px rgba(136, 167, 245, 0.08);
+    padding: 0;
+}
+
+.nav-link {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 7px 25px;
+    display: flex;
+    align-items: center;
+    stroke: #7D7D7D;
+}
+
+.nav-item__icon {
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    color: #343434;
+    border-left: 3px solid #6666CC;
+}
+
+.nav-item:hover>.nav-item__icon {
+    stroke: #6666CC;
+}
+
+.header {
+    min-height: 100px;
+    max-width: 100%;
+    margin-left: 35px;
+    padding: 20px 10px;
+}
+
+.content {
+    max-width: 1100px;
+    margin-left: 35px;
+    padding: 0 10px;
+}
+
+.profile__message__btn {
+    border: 1px solid #D4D4D4;
+}
+
+.profile__bio {
+    background-color: #fff;
+    box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
+}
+
+.profile__bio__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7D7D7D;
+    text-align: center;
+}
+
+.btn-create-store {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    background: #55C97B;
+    min-width: 185px;
+}
+
+.btn-create-store::before {
+    position: absolute;
+    content: '+';
+    font-size: 21px;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+}
+
+.btn-create-store:hover {
+    color: #fff;
+    opacity: .8;
+}
+
+.content__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    color: #343434;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 11px 21px rgba(40, 40, 40, 0.07);
+    border: none;
+}
+
+.action__btn {
+    min-width: 100px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.action__btn:hover {
+    color: #fff;
+    opacity: .8;
+}
+
+.action__btn-edit {
+    background-color: #55C97B;
+}
+
+.action__btn-delete {
+    background-color: #B1B1B1;
+    margin-left: 10px;
+}
