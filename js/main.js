@@ -3,9 +3,10 @@ const pageConfig =
 {
     content: 
     {
-        btn_create_store : '',
+        btn_create_store : '.btn-create-store',
         store_list__elem : '#store__list__elem__pattern',
         store_list       : '.store__list__data',
+        modal: '#modal_create_store'
     }
 }
 $(()=>
@@ -146,6 +147,7 @@ class Content
 
     createStore()
     {
-        
+        console.log($(this.config.modal));
+        $(this.config.modal).modal('show')
     }
 }

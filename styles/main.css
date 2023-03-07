@@ -1,7 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F8FAFF;
+    font-weight: 500;
     color: #7D7D7D;
+    line-height: 21px;
     font-size: 14px;
 }
 
@@ -10,20 +12,29 @@ body {
 }
 
 .logo {
-    margin: 25px;
+    margin: 25px 0 0 25px;
 }
 
 .navbar {
     background-color: #fff;
-    box-shadow: 0px 0px 38px rgba(136, 167, 245, 0.08);
     padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar__wrapper {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.navbar__wrapper > .navbar-toggler {
+    background-color: #ffffff !important;
 }
 
 .nav-link {
     color: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
 }
 
 .nav-item {
@@ -43,6 +54,7 @@ body {
 .nav-item:hover {
     color: #343434;
     border-left: 3px solid #6666CC;
+    stroke: #6666CC;
 }
 
 .nav-item:hover>.nav-item__icon {
@@ -57,7 +69,7 @@ body {
 }
 
 .content {
-    max-width: 1100px;
+    max-width: 1350px;
     margin-left: 35px;
     padding: 0 10px;
 }
@@ -72,10 +84,6 @@ body {
 }
 
 .profile__bio__name {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: #7D7D7D;
     text-align: center;
 }
 
@@ -101,6 +109,14 @@ body {
     opacity: .8;
 }
 
+.store__list {
+    overflow-x: auto;
+}
+
+.store__list__heading {
+    color: #343434;
+}
+
 .content__title {
     font-weight: 500;
     font-size: 20px;
@@ -115,10 +131,10 @@ body {
 }
 
 .action__btn {
-    min-width: 100px;
+    min-width: 140px;
     color: #fff;
     font-size: 12px;
-    line-height: 21px;
+    padding: 5px 10px 5px 40px;
 }
 
 .action__btn:hover {
@@ -127,10 +143,174 @@ body {
 }
 
 .action__btn-edit {
+    position: relative;
     background-color: #55C97B;
 }
 
+.action__btn-edit::before {
+    position: absolute;
+    content: url('../assets/images/pencil.svg');
+    left: 10px;
+    bottom: 0;
+}
+
 .action__btn-delete {
+    position: relative;
     background-color: #B1B1B1;
     margin-left: 10px;
+    padding: 5px 20px 5px 20px;
+}
+
+.action__btn-delete::before {
+    position: absolute;
+    content: url('../assets/images/delete.svg');
+    left: 10px;
+    bottom: 0;
+    top: 8px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-dialog {
+    max-width: 620px;
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: flex-start;
+}
+
+input, 
+select.form-select {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.form-select {
+    max-width: 240px;
+}
+
+.modal-title {
+    color: #343434;
+    font-size: 20px;
+}
+
+.input__domain {
+    background: #E6E6E9;
+}
+
+.input__domain::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7D7D7D;
+}
+
+.input__domain__text {
+    background: #6666CC;
+    color: #fff;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    min-width: 150px;
+    text-align: center;
+}
+
+.modal__warning__text {
+    color: #7D7D7D;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.modal__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #343434;
+}
+
+.modal__link {
+    color: #6666CC;
+    text-decoration: none;
+}
+
+.btn__modal {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    padding: 7px 40px;
+}
+
+.btn__modal:hover {
+    color: #fff;
+    opacity: .8;
+}
+
+.btn__modal-create {
+    background-color: #55C97B;
+}
+
+.btn__modal-cancel {
+    background-color: #B1B1B1;
+}
+
+.btn-close-modal {
+    stroke: #212529;
+}
+
+.btn-close-modal:hover {
+    stroke: #6666CC;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 13px;
+    }
+    .navbar__wrapper {
+        height: auto;
+    }
+    .logo {
+        margin: 10px 0;
+    }
+    .header {
+        margin: 0 auto;
+    }
+    .content {
+        margin: 0 auto;
+    }
+    .action {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+    .action__btn {
+        min-width: 120px;
+        color: #fff;
+        padding: 5px 5px 5px 20px;
+    }
+    .action__btn-edit {
+        margin-bottom: 10px;
+    }
+    .action__btn-delete {
+        margin-left: 0px;
+    }
+    .action__btn::before {
+        left: 3px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        font-size: 12px;
+    }
 }
